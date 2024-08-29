@@ -3,4 +3,4 @@ requirments.txt
 
 webdesign/local_setting.py
 
-webdesign/db.sqlite3
+db.sqlite3
