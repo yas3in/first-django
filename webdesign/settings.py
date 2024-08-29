@@ -19,6 +19,9 @@ from webdesign.local_setting import *
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+from webdesign.local_setting import *
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -36,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +79,13 @@ WSGI_APPLICATION = 'webdesign.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'NAME' : BASE_DIR / 'db.sqlite3',
+        # 'NAME': databases['name'],
+    #     'USER': databases['user'],
+    #     'PASSWORD': databases['password'],
+    #     'HOST': databases['host'],
+    #     'PORT': databases['port'],
+     }
 }
 
 

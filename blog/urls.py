@@ -1,12 +1,13 @@
 from webdesign.urls import path
-from blog.views import blog_pages, list_number, sum_number
+from blog.views import post_pages, sum_numbers_in_url, filter_post_city_list
+from django.urls import re_path
 
 
 urlpatterns = [
-    path('list/', blog_pages),
-    
+    path('list/', post_pages),
     #get a number for show in url
     #variable use to path in <> and can use thi varibale in function
-    path('list/<int:number>', list_number),
-    path('list/<slug:number>', sum_number),
+    path('sum/<slug:number>/', sum_numbers_in_url),
+    re_path(r'city-list/(?P<city_name>[\w-]+)/', filter_post_city_list)
+    
 ]
