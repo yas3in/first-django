@@ -78,13 +78,13 @@ WSGI_APPLICATION = 'webdesign.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME' : BASE_DIR / 'db.sqlite3',
-        # 'NAME': databases['name'],
-    #     'USER': databases['user'],
-    #     'PASSWORD': databases['password'],
-    #     'HOST': databases['host'],
-    #     'PORT': databases['port'],
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME' : BASE_DIR / 'db.sqlite3',
+        'NAME': databases['name'],
+        'USER': databases['user'],
+        'PASSWORD': databases['password'],
+        'HOST': databases['host'],
+        'PORT': databases['port'],
      }
 }
 
