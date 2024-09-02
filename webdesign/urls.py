@@ -21,5 +21,6 @@ from blog.views import first_blog
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
-    path('blog', first_blog)
+    path('blog', first_blog),
+    path('catalouge/', include("catalouge.urls"))
 ]
